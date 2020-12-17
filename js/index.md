@@ -52,3 +52,22 @@
   4. 变量提升：不论通过var声明的变量处于当前作用于的第几行，都会提升到作用域的最顶部。而let声明的变量不会在顶部初始化，凡是在let声明之前使用该变量都会报错（引用错误ReferenceError）；
 
   const用来专门声明一个常量，它跟let一样作用于块级作用域，没有变量提升，重复声明会报错，不同的是const声明的常量不可改变，声明时必须初始化（赋值）
+
+
+### Set 实现并集、交集和差集。
+```
+  let a = new Set([1, 2, 3]);
+  let b = new Set([4, 3, 2]);
+
+  // 并集
+  let union = new Set([...a, ...b]);
+  // Set {1, 2, 3, 4}
+
+  // 交集
+  let intersect = new Set([...a].filter(x => b.has(x)));
+  // set {2, 3}
+
+  // （a 相对于 b 的）差集
+  let difference = new Set([...a].filter(x => !b.has(x)));
+  // Set {1}
+```
