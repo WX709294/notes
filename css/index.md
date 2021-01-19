@@ -109,20 +109,7 @@ https://juejin.cn/post/6844903928442667015#heading-7
   CSS3规范中的要求使用双冒号(::)表示伪元素，以此来区分伪元素和伪类，比如::before和::after等伪元素使用双冒号(::)，:hover和:active等伪类使用单冒号(:)。除了一些低于IE8版本的浏览器外，大部分浏览器都支持伪元素的双冒号(::)表示方法。
 
 
-### 小于12px的文字生成器
-```
-<svg width="195.625" height="13.02">
-  <text
-    dominant-baseline="baseline"
-    font-size="11"
-    y="11.02"
-    style="line-height: 1; vertical-align: middle;"
-  >
-    千山鸟飞绝 - from hill to hill no bird in flight
-  </text>
-</svg>
-```
-> TIP
-> 使用 svg 作为解决小于 12px 字号文字的方案：
-> 使用 transform: scale() 设置后占位区域并没有改变，难以调节对齐方式。
-> 使用 canvas 无法选中文字（也可以解决，但不如 svg 简洁）
+### require工作原理
+
+  主要负责页面登录注册、部分组建、页面介绍，h5页面主要是负责通过页面唤起app以及各个分析页面的布局、从app分享至微信、需要不同设备的兼容性、
+  使用mixins
